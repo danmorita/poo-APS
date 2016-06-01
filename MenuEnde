@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class MenuEnde{
+    public static void main (String args[]){
+        Scanner scanf = new Scanner(System.in);
+        Endereco enderecos[] = new Endereco
+        
+        System.out.println("");
+        
+        criar() : Endereco
+        pesquisarEndereco (id : int, enderecos : Endereco[]) : Endereco
+    }
+}

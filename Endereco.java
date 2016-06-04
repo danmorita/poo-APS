@@ -16,11 +16,11 @@
       }
       //metodos
       public Endereco criar(){
-          System.out.println("Digite o nome da rua:")
-      return
+          System.out.println("Digite o nome da rua:");
+          return this;
       }
       public Endereco pesquisarEndereco(){
       
-      return 
+          return this;
       }
   }

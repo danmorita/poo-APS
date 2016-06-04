@@ -4,10 +4,10 @@ public class Titulo{
     private Socio titular;
     private Mensalidade[] mensalidades;
     //construtor
-    public Titulo(int tituId, Socio titu, Mensalidade[] mensa){
-        this.tituloId = tituId;
-        this.titular = titu;
-        this.mensalidades = mensa;
+    public Titulo(int tituId, Socio titular, Mensalidade[] mensalidades){
+        this.tituloId = tituloId;
+        this.titular = titular;
+        this.mensalidades = mensalidades;
     }
     //metodos
     public Titulo criar(Endereco[] enderecos){

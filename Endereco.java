@@ -8,11 +8,11 @@
       private String cidade;
       private String estado;
       //construtor
-      public Endereco(String rua, String cep, String cida, String esta){
+      public Endereco(String rua, String cep, String cidade, String estado){
           this.rua = rua;
           this.cep = cep;
-          this.cidade = cida;
-          this.estado = esta;
+          this.cidade = cidade;
+          this.estado = estado;
       }
       //metodos
       public Endereco criar(){

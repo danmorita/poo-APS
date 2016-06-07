@@ -16,7 +16,7 @@ public class Socio {
 		this.matriculas = new Matricula[10];
 	}
 	
-	public static Socio criar(){
+	public static Socio criar(Endereco[] enderecos){
 		//criar socio;
 		return null;
 	}

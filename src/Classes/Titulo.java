@@ -19,7 +19,13 @@ public class Titulo{
     
    
 	
-    public static  Titulo criar(Endereco[] enderecos){
+    public Titulo() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public static  Titulo criar(Endereco[] enderecos){
     	Scanner input = new Scanner(System.in);
     	int opcao;
     	Titulo criado;
@@ -40,35 +46,45 @@ public class Titulo{
         		int contador = 0;
         		
         		System.out.println("Cadastro de dependentes");
-        		int op;
+        		int op = 1;
         		
+        		//looping abaixo modificado...
         		do{
-        			System.out.println("Deseja adicionar um Novo Dependente:\n 0 - NAO \n 1 - SIM");
-            		op = input.nextInt();
-        			
             		if(op==1){
             			dependentes[contador]= Socio.criar(enderecos);
             			contador++;
+            			System.out.println("Deseja adicionar um Novo Dependente:\n 0 - NAO \n 1 - SIM");
+                		op = input.nextInt();
             		}else if(op==0){
-            			criado = new TituloFamiliar(titular,dependentes,contador);
+            			break;
             		}else{
             			System.out.println("Opcao Invalida , tente novamente");
-            			
+            			op = input.nextInt();
             		}
-        		}while(op != 1 && op != 0);
+            		
+        		}while(op != 0);
         		
         		
         	}else{
-        		System.out.println("Opcao Invalida , tente novamente");
+        		System.out.println("Opcao Invalida , tente novamente!\n");
         	}
     	}while(opcao != 0 && opcao !=1);
-    	
+    	//}while((opcao != 0)&&(opcao !=1)); nao sei se o de cima funciona...
     	return null;
     			
       
     }
     public Titulo pesquisarTitulo(int id, Titulo[] titulos){
-    
+    	Titulo encontrado = new Titulo();
+    	for(int i=0; i<Titulo.getMaxId(); i++){
+    		if(id==titulos[i].getTituloId()){
+    			encontrado = titulos[i];
+    			System.out.println("Encontrado");
+    			return encontrado;
+    		}else{
+    			System.out.println("Pesquisa nao encontrada!\n");
+    		}
+    	}
        return null;
     }
     public Mensalidade calcularMensalidade(){
@@ -87,6 +103,9 @@ public class Titulo{
 
 	private static int getMaxId() {
 		return maxId;
+	}
+	public int getTituloId(){
+		return tituloId;
 	}
 
 }

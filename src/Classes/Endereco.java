@@ -55,7 +55,7 @@ import java.util.Scanner;
     			  return encontrado;
     		  }
     	  }
-          return this;
+          return this;//ta certo?
       }
       public double getEnderecoId(){
     	  return this.enderecoId;
